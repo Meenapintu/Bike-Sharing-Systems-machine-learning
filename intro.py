@@ -1,5 +1,5 @@
 #PINTULAL 
-#120050018
+
 #CS403 (Foundations of Machine Learning_) Assignment 1.
 
 #-------------------------------------------------------------------------------------------
@@ -54,7 +54,7 @@ df2 = df2.drop(cols,axis=1)
 
 
 
-#df['Age'] = df['Age'].interpolate()
+
 
 #print("\n")
 #print("----------------------------------------------------------------------------------")
@@ -78,9 +78,6 @@ clf.fit(X_train,y_train)
 
 #------------------------------------------------------------------------------------------
 X2 = df2.values
-
-#X_train2, X_test2, y_train2, y_test = cross_validation.train_test_split(X2,y2,test_size=0.0,random_state=0)
-
 pred = []
 pred=clf.predict(X2)
 #print("\n")
@@ -93,12 +90,3 @@ df3.to_csv('output.csv',index_label='id')
 
 
 
-
-#print(clf.score(X_test,y_test))
-
-
-'''
-clf = tree.DecisionTreeClassifier(max_depth=5)
-scores = cross_validation.cross_val_score(clf, X, y, cv=5)
-print("----------------------------------------------------------------------------------")
-print(scores)'''
