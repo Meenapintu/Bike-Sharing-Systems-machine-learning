@@ -1,5 +1,5 @@
 #PINTULAL 
-#120050018
+
 #CS403 (Foundations of Machine Learning_) Assignment 1.
 
 RUN CODE COMMAND :
@@ -8,7 +8,7 @@ RUN CODE COMMAND :
 by running code it will output a csv file (output.csv) .
 the output.csv content two column id and cnt.
 
-used python lib function kernel rbf to predict value.
+used python lib function linear regression to predict value.
 
 
 :ZIP file contain 

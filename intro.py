@@ -7,7 +7,6 @@ import pandas as pd
 import numpy as np
 from sklearn import linear_model
 from sklearn import cross_validation
-from sklearn.svm import SVR
 
 
 df = pd.read_csv('bikeDataTrainingUpload.csv',header=0)
@@ -72,13 +71,9 @@ X = np.delete(X,4,axis=1)
 
 X_train, X_test, y_train, y_test = cross_validation.train_test_split(X,y,test_size=0.0,random_state=0)
 
-#clf = linear_model.LinearRegression() #Ridge(alpha=1.0) 
+clf = linear_model.LinearRegression() #Ridge(alpha=1.0) 
 
-svr_rbf = SVR(kernel='rbf', C=1e4, gamma=0.05)
-
-
-
-#clf.fit(X_train,y_train)
+clf.fit(X_train,y_train)
 
 
 #------------------------------------------------------------------------------------------
@@ -87,10 +82,7 @@ X2 = df2.values
 #X_train2, X_test2, y_train2, y_test = cross_validation.train_test_split(X2,y2,test_size=0.0,random_state=0)
 
 pred = []
-#pred=clf.predict(X2)
-
-pred = svr_rbf.fit(X_train,y_train).predict(X2)
-
+pred=clf.predict(X2)
 #print("\n")
 #print("----------------------------------------------------------------------------------")
 
